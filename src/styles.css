@@ -1,14 +1,12 @@
 body {
-  /* margin: auto auto; */
   margin: 0;
   padding: 0;
 }
 
-#root{
+#root {
   --large-font: 3rem;
   --medium-font: 1.2rem;
   --small-font: 0.9rem;
-  
 }
 
 .App {
@@ -16,21 +14,16 @@ body {
   text-align: center;
   background-image: url("https://res.cloudinary.com/pacmankana/image/upload/v1542740935/url_shortener/url_shortener.jpg");
   background-size: cover;
-  /* background-attachment: fixed; */
-  /* background-repeat: no-repeat; */
-
 }
 
 .content_container {
   display: flex;
   justify-content: center;
   width: 50%;
-  background-color: rgba(0,0,0,0.7);
-
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .content {
-
   padding-top: 10px;
   min-height: 100vh;
   display: flex;
@@ -38,9 +31,7 @@ body {
   align-items: center;
   color: white;
   width: 90%;
-  font-family: 'Dosis', sans-serif;
-
-
+  font-family: "Dosis", sans-serif;
 }
 
 .content_title {
@@ -50,8 +41,8 @@ body {
 }
 
 .content_subtitle {
-padding: 10px;
-font-size: var(--medium-font);
+  padding: 10px;
+  font-size: var(--medium-font);
 }
 
 button {
@@ -63,7 +54,7 @@ button {
 }
 
 button:hover {
-  background: rgb(50,50,50);
+  background: rgb(50, 50, 50);
   color: white;
   cursor: pointer;
 }
@@ -76,7 +67,8 @@ textarea {
   color: black;
 }
 
-textarea:focus, button:focus {
+textarea:focus,
+button:focus {
   outline: none;
 }
 
@@ -95,21 +87,20 @@ textarea:focus, button:focus {
   color: inherit;
 }
 
-a{
+a {
   color: rgb(185, 185, 247);
 }
 a:hover {
   color: rgb(139, 139, 247);
 }
 
-@media (max-width: 800px){
-  #root{
+@media (max-width: 800px) {
+  #root {
     --large-font: 2rem;
     --medium-font: 1rem;
     --small-font: 0.9rem;
-    
   }
-.content_container {
-  width: 100%;
-}
+  .content_container {
+    width: 100%;
+  }
 }
