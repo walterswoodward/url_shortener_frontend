@@ -122,6 +122,11 @@ a:hover {
     width: 100%;
   }
 
+
+  textarea {
+    height: 80px;
+  }
+
   button {
     margin: 5px;
   }
