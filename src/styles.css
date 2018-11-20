@@ -121,4 +121,8 @@ a:hover {
   .content_container {
     width: 100%;
   }
+
+  button {
+    margin: 5px;
+  }
 }
