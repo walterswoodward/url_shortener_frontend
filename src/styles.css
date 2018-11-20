@@ -38,7 +38,8 @@ body {
   align-items: center;
   color: white;
   width: 90%;
-  font-family: 'Kodchasan', sans-serif;
+  font-family: 'Dosis', sans-serif;
+
 
 }
 
@@ -46,7 +47,6 @@ body {
   font-size: var(--large-font);
   font-weight: bold;
   padding: 10px;
-
 }
 
 .content_subtitle {
