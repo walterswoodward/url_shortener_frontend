@@ -25,22 +25,17 @@ class App extends Component {
   handleSubmit(e) {
     
     e.preventDefault();
-    const URL = "http://localhost:5000/";
+    const URL = "https://wsw-url-shortener.herokuapp.com";
     // If another link was previously copied, you need to clear newShortURL
     this.setState({
       newShortUrl: ""
     })
 
-    axios.get(`${URL}new/${this.state.urlInput}`).then(response => {
-      console.log(response);
-      console.log(
-        "Here is your new shortUrl LINK:",
-        `http://localhost:5000/${response.data.shortUrl}`
-      );
+    axios.get(`${URL}/new/${this.state.urlInput}`).then(response => {
       this.setState({
-        newShortUrl: <a href={`http://localhost:5000/${
+        newShortUrl: <a href={`${URL}/${
           response.data.shortUrl
-        }`} >http://localhost:5000/{
+        }`} >{URL}/{
           response.data.shortUrl
         }</a>
       });
@@ -55,7 +50,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h3> URL Shortener</h3>
+          <h1> URL Shortener</h1>
           <h4> Click one of the URL links below and click Submit</h4>
           {this.state.youTubeLinks.map((item, index) => {
             return(
@@ -67,7 +62,7 @@ class App extends Component {
               {item}
             </button>
           )})}
-
+<br/>
           <input
             onChange={event =>
               this.handleChange("urlInput", event.target.value)
