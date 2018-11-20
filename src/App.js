@@ -10,6 +10,8 @@ class App extends Component {
       urlInput: "",
       newShortUrl: "",
       youTubeLinks: [
+        // Google Search: "What was David Bowie doing on April 6th, 1973?"
+        // "https://www.google.com/search?ei=iGr0W5bgFYyc_QbpvaXQAg&q=What+was+David+Bowie+doing+on+April+6th%2C+1973&oq=What+was+David+Bowie+doing+on+April+6th%2C+1973&gs_l=psy-ab.3...2732.26152..26921...11.0..0.132.5466.8j43....2..0....1..gws-wiz.....6..0j0i71j35i39j0i131j0i67j0i20i263j33i22i29i30j0i13j0i22i30j0i22i10i30j33i299j33i160.JkkF8j6Q5bc",
         "https://youtu.be/VbD_kBJc_gI", // "Let's Dance" by David Bowie
         "https://youtu.be/izGwDsrQ1eQ" // "Careless Whisper" by George Michael
       ]
@@ -72,6 +74,7 @@ class App extends Component {
             {this.state.youTubeLinks.map((item, index) => {
               return (
                 <button
+                  className="content_button"
                   onClick={event => this.handlePaste(event.target.value)}
                   value={item}
                   key={index}
@@ -88,7 +91,7 @@ class App extends Component {
               value={this.state.urlInput}
             />
             <br />
-            <button onClick={this.handleSubmit}>Submit</button>
+            <button onClick={this.handleSubmit} className="submit_button">Submit</button>
             {renderNewUrl}
           </div>
         </div>
