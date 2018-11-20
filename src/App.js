@@ -68,7 +68,7 @@ class App extends Component {
             <div className="content_title"> URL Shortener</div>
             <div className="content_subtitle">
               {" "}
-              Click one of the URL links below (OR use one of your own) and
+              Click one of the URL links below and
               click Submit
             </div>
             {this.state.youTubeLinks.map((item, index) => {
