@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import "./styles.css";
 import axios from "axios";
 
@@ -44,12 +44,14 @@ class App extends Component {
 
   render() {
     const renderNewUrl =
-      this.state.newShortUrl === ""? (
-        <div className="newUrl_url"/>
-      ) :
-      this.state.newShortUrl.includes("URL Invalid") === true? <div className="newUrl_url">Sorry! Looks like you entered an invalid URL!</div> : (
-        // <div className="newUrlContent">Your new shortened URL will appear below on submit</div>
-        <div className="newUrlContent">
+      this.state.newShortUrl === "" ? (
+        <div />
+      ) : this.state.newShortUrl.includes("URL Invalid") === true ? (
+        <div className="newUrl_text">
+          Sorry! Looks like you entered an invalid URL!
+        </div>
+      ) : (
+        <Fragment>
           <div className="newUrl_text">
             Here is your new shortened URL! Go ahead and test it out!
           </div>
@@ -59,7 +61,7 @@ class App extends Component {
               {this.state.URL}/{this.state.newShortUrl}
             </a>
           </div>
-        </div>
+        </Fragment>
       );
     return (
       <div className="App">
@@ -68,8 +70,7 @@ class App extends Component {
             <div className="content_title"> URL Shortener</div>
             <div className="content_subtitle">
               {" "}
-              Click one of the URL links below and
-              click Submit
+              Click one of the URL links below and click Submit
             </div>
             {this.state.youTubeLinks.map((item, index) => {
               return (
@@ -91,8 +92,10 @@ class App extends Component {
               value={this.state.urlInput}
             />
             <br />
-            <button onClick={this.handleSubmit} className="submit_button">Submit</button>
-            {renderNewUrl}
+            <button onClick={this.handleSubmit} className="submit_button">
+              Submit
+            </button>
+            <div className="newUrlContent">{renderNewUrl}</div>
           </div>
         </div>
       </div>
