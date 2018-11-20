@@ -24,7 +24,7 @@ class App extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const URL = "https://wsw-url-shortener.herokuapp.com";
+    const URL = "https://z00.herokuapp.com";
     // const URL = "http://localhost:5000";
     // If another link was previously copied, you need to clear newShortURL
     this.setState({
@@ -51,7 +51,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1> URL Shortener</h1>
-          <h4> Click one of the URL links below and click Submit</h4>
+          <h4> Click one of the URL links below (OR use one of your own) and click Submit</h4>
           {this.state.youTubeLinks.map((item, index) => {
             return (
               <button
