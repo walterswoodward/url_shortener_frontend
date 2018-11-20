@@ -45,7 +45,7 @@ class App extends Component {
   render() {
     const renderNewUrl =
       this.state.newShortUrl === ""? (
-        <div />
+        <div className="newUrl_url"/>
       ) :
       this.state.newShortUrl.includes("URL Invalid") === true? <div className="newUrl_url">Sorry! Looks like you entered an invalid URL!</div> : (
         // <div className="newUrlContent">Your new shortened URL will appear below on submit</div>
