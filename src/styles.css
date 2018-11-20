@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background: black;
 }
 
 #root {
@@ -10,6 +11,8 @@ body {
 }
 
 .App {
+  max-width: 1000px;
+  margin: auto auto;
   letter-spacing: 1.5px;
   text-align: center;
   background-image: url("https://res.cloudinary.com/pacmankana/image/upload/v1542740935/url_shortener/url_shortener.jpg");
